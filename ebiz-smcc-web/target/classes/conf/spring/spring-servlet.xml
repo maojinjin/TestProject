@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+	<!-- <import resource="classpath:conf/applicationContext-venus-placeholder.xml" /> -->
+    <bean class="com.saic.framework.athena.module.base.AnnotationedAgentLogicScanner" init-method="init" autowire="byType"/>
+	<context:annotation-config />
+	       <context:component-scan base-package="com.saic.framework.athena"/>
+			
+			<import resource="classpath*:applicationContext-athena-agent.xml" />
+			
+			<!-- 监控domain -->
+			
+			<bean name="configManager" class="com.saic.framework.athena.configuration.DefaultClientConfigManager">
+			
+			    <!--domain 配置 必填 -->
+			
+			    <property name="appName" value="ebiz-smcc-web"/>
+			
+			    <!--monitorEnabled 为总开关 默认为 yes 关闭可以填 no-->
+			
+			    <property name="monitorEnabled"  value="${ebiz.aic.monitorEnabled}" />
+			
+			</bean>
+	
+	
+	<!-- <context:component-scan base-package="com.saic.ebiz.smcc.web" /> -->
+	<!--权限相关的controller -->
+
+<!-- 	<context:component-scan base-package="com.saic.ebiz.aic.auth.web" /> -->
+<!-- 	<context:component-scan base-package="com.saic.ebiz.aic.auth.treeFilter" /> -->
+	<!-- <aop:aspectj-autoproxy proxy-target-class="true" /> -->
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven conversion-service="conversionService">
+		<mvc:message-converters>
+			<bean
+				class="com.ibm.framework.web.escape.StringEscapeHttpMessageConverterr"></bean>
+			<!-- <bean class="com.ibm.framework.web.gson.MappingGson2HttpMessageConverter"> 
+				<property name="supportedMediaTypes"> <list> <value>text/html;charset=UTF-8</value> 
+				<value>text/json;charset=UTF-8</value> <value>application/json;charset=UTF-8</value> 
+				</list> </property> </bean> -->
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	
+			
+	<!-- <mvc:annotation-driven conversion-service="conversionService" /> -->
+
+	<!-- 类型转换支持 -->
+	<!-- <bean id="conversionService"
+		class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean class="com.saic.ebiz.smcc.web.converter.StringDateConverter" />
+				<bean class="com.saic.ebiz.smcc.web.converter.DateStringConverter" />
+				<bean class="com.saic.ebiz.smcc.web.converter.StringTimestampConverter" />
+				<bean class="com.saic.ebiz.smcc.web.converter.TimestampStringConverter" />
+			</list>
+		</property>
+	</bean> -->
+
+
+	<!--===================== view resovler ===================== -->
+
+	<!-- <bean id="viewResolver" abstract="true">
+		<property name="attributes">
+			<props>
+				<prop key="resRoot">${ebiz.aic.resRoot}</prop>
+				<prop key="uaaResRoot">${ebiz.aic.uaaResRoot}</prop>
+				<prop key="cxjwebHost">${ebiz.cxj.web.host}</prop>
+				<prop key="minSuffix">${ebiz.ccc.minSuffix}</prop>
+			</props>
+		</property>
+	</bean> -->
+
+	<!-- <bean id="jstlViewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver"
+		parent="viewResolver">
+		<property name="order" value="2" />
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+	</bean> -->
+
+
+	<!-- 针对freemarker的视图配 -->
+	<!-- <bean id="freemarkerResolver"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"
+		parent="viewResolver">
+		<property name="cache" value="false" />
+		<property name="order" value="1" />
+		<property name="viewNames">
+			<array>
+				<value>*.ftl</value>
+				<value>*.html</value>
+			</array>
+		</property>
+		<property name="suffix" value=".html" />
+		<property name="requestContextAttribute" value="request" />
+		<property name="exposeSpringMacroHelpers" value="true" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes" value="true" />
+		<property name="allowSessionOverride" value="true" />
+		<property name="contentType" value="text/html;charset=utf-8" />编码
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
+		<property name="viewClass"
+			value="com.saic.framework.web.freemarker.CustomFreeMarkerView" />
+	</bean> -->
+	<!-- ===================== view resolver end ====================== -->
+	<!-- freemarker config -->
+	<!-- <bean id="freemarkerConfig"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<description>Required for Freemarker to work in web tier
+		</description>
+		<property name="configuration" ref="freemarkerConfiguration" />
+	</bean> -->
+
+	<bean id="freemarkerConfiguration"
+		class="org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean">
+		<!-- 模板加载路径 -->
+		<property name="templateLoaderPaths">
+			<list>
+				<value>/WEB-INF/</value>
+				<value>/WEB-INF/views/</value>
+				<value>/WEB-INF/auth_views/</value>
+				<value>/html/</value>
+			</list>
+		</property>
+		<property name="configLocation">
+			<value>classpath:conf/freemarker.properties</value>
+		</property>
+		<!--全局变量部分 -->
+		<property name="freemarkerVariables">
+			<map>
+				<entry key="lookup.scope.session" value="false" />
+				<entry key="xml_escape" value-ref="fmXmlEscape" />
+				<entry key="html_escape" value-ref="fmHtmlEscape" />
+				<entry key="resRoot" value="${ebiz.aic.resRoot}" />
+				<entry key="uaaResRoot" value="${ebiz.aic.uaaResRoot}" />
+				<!-- <entry key="minSuffix" value="${ebiz.ccc.minSuffix}" /> -->
+				<entry key="codelist" value-ref="codeStoreEvaluate" />
+				<entry key="code" value-ref="codeSelectedStore" />
+				<entry key="codeType" value-ref="codeTypeSelectedStore" />
+				<entry key="breadcrumb" value-ref="fmBreadcrumb" />
+				<entry key="carModelDirective" value-ref="carModelDirectiveBean" />
+				<entry key="authorization" value-ref="authorizationDirectiveBean" />
+				<entry key="carModelDirectiveDCC" value-ref="carModelDirectiveDccBean" />
+				<entry key="carModelDirectiveDCC2" value-ref="carModelDirectiveDccBean2" />
+				<entry key="carModelDirectiveDCC3" value-ref="carModelDirectiveDccBean3" />
+				<entry key="remoteUrl" value-ref="remoteSiteContent" />
+			</map>
+		</property>
+		<property name="defaultEncoding" value="utf-8" />
+	</bean>
+
+	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape" />
+	<bean id="fmHtmlEscape" class="freemarker.template.utility.HtmlEscape" />
+	
+	<bean id="remoteSiteContent" class="com.saic.ebiz.eadccc.out.RemoteSiteContent"></bean>
+	<!-- freemarker config end -->
+
+
+
+	<!-- Exception Resolver -->
+	<!-- <bean id="handlerExceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="defaultErrorView" value="error/500.html" />
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">error/500.html</prop>
+				<prop key="java.lang.Throwable">error/500.html</prop>
+			</props>
+		</property>
+		<property name="statusCodes">
+			<props>
+				<prop key="errors/error">500</prop>
+				<prop key="errors/404">404</prop>
+			</props>
+		</property>
+		<property name="warnLogCategory" value="WARN"></property>
+		默认HTTP状态码
+		<property name="defaultStatusCode" value="500"></property>
+	</bean> -->
+
+	<!-- 设置multipartResolver才能完成文件上传 -->
+	<!-- <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8"></property>
+		<property name="maxUploadSize">
+			<value>32505856</value>上传文件大小限制1M
+		</property>
+		<property name="maxInMemorySize">
+			<value>4096</value>
+		</property>
+	</bean> -->
+
+
+	<!-- ====================== i18n =============================== -->
+	<!-- <bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:i18n/messages" />
+	</bean> -->
+
+
+	<!-- <bean name="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource">
+			<ref bean="messageSource" />
+		</property>
+	</bean> -->
+
+	<!-- <bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.FixedLocaleResolver">
+		<property name="defaultLocale" value="zh_CN" />
+	</bean> -->
+
+
+	<!-- <bean id="jackson_hmc"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+		<property name="objectMapper">
+			<bean class="org.codehaus.jackson.map.ObjectMapper">
+				<property name="dateFormat">
+					<bean class="java.text.SimpleDateFormat">
+						<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss"></constructor-arg>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean> -->
+	
+	
+		<!-- Beans Required for Spring Security - Start -->
+	<!-- <bean id="delegatingFilterProxy" class="org.springframework.security.web.FilterChainProxy">
+		<constructor-arg>
+		<list>  
+		<security:filter-chain pattern="/workSheet/toWorkSheetPage.htm*" filters="none" />
+		<security:filter-chain pattern="/inbound/customerInfo4WorkSheet.htm*" filters="none" />
+		<security:filter-chain pattern="/workSheetFlow/goCandidateTaskList.htm*" filters="none" />
+		<security:filter-chain pattern="/workSheet/toShowByProcInst.htm*" filters="none" />
+		<security:filter-chain pattern="/workSheet/showImg.htm*" filters="none" />
+		<security:filter-chain pattern="/es/workSheetQuery/show.htm*" filters="none" />
+		<security:filter-chain pattern="/workSheet/show.htm*" filters="none" />
+		<security:filter-chain pattern="/workSheet/getProHistory.htm*" filters="none" />
+		<security:filter-chain pattern="/workSheet/downdtFile.json*" filters="none" />
+		<security:filter-chain pattern="/workSheetFlow/getAssigneeTaskList.json*" filters="none" />
+		<security:filter-chain pattern="/workSheetFlow/getCandidateTaskList.json*" filters="none" />
+		<security:filter-chain pattern="/login*" filters="none" />
+		<security:filter-chain pattern="/**"
+				filters="httpSessionContextFilter,exceptionTranslationFilter,filterSecurityInterceptor" />
+		</list>
+		</constructor-arg>
+	</bean> -->
+
+	<!-- freemarker自定义标签start -->
+<!-- 	<bean id="codeStoreEvaluate" class="com.saic.ebiz.aic.web.freemarker.CodeListModelDirective" /> -->
+<!-- 	<bean id="codeSelectedStore" class="com.saic.ebiz.aic.web.freemarker.CodeModelDirective" /> -->
+<!-- 	<bean id="fmBreadcrumb" -->
+<!-- 		class="com.saic.ebiz.aic.web.freemarker.BreadcrumbModelDirective" /> -->
+<!-- 	<bean id="codeTypeSelectedStore" class="com.saic.ebiz.aic.web.freemarker.CodeTypeModelDirective"></bean> -->
+<!-- 	<bean id="carModelDirectiveBean" class="com.saic.ebiz.aic.web.freemarker.CarModelDirective"></bean> -->
+<!-- 	<bean id="carModelDirectiveDccBean" class="com.saic.ebiz.aic.web.freemarker.CarModelDirectiveDCC"></bean> -->
+<!-- 	<bean id="carModelDirectiveDccBean2" class="com.saic.ebiz.aic.web.freemarker.CarModelDirectiveDCC2"></bean> -->
+<!-- 	<bean id="carModelDirectiveDccBean3" class="com.saic.ebiz.aic.web.freemarker.CarModelDirectiveDCC3"></bean> -->
+<!-- 	<bean id="authorizationDirectiveBean" -->
+<!-- 		class="com.saic.ebiz.aic.web.freemarker.AuthorizationDirective" /> -->
+	<!-- freemarker自定义标签 end -->
+
+    <!--add wuxinping 20170804 增加 ivr语音通用公共处理url isWorkingTime isJiejiariTime -->
+<!-- 	<mvc:interceptors> -->
+<!-- 		<mvc:interceptor> -->
+<!-- 			<mvc:mapping path="/**/*.htm" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/*.ajax" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/*.json" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/login.htm" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/app/customer/help.htm" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/app/driver/help.htm" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/user/change.htm" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/user/change/password.htm" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/outbound/updateCallRecord/update.json*" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/record/ivr/addIvrRecord.json*" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/admin/DateAndTime/isWorkingTime.json*" /> -->
+<!-- 			<mvc:exclude-mapping path="/**/admin/DateAndTime/isJiejiariTime.json*" /> -->
+<!-- 			<bean class="com.saic.ebiz.aic.web.sys.CheckLoginInterceptor" /> -->
+<!-- 		</mvc:interceptor> -->
+<!-- 		<bean class="com.saic.framework.athena.spring.mvc.SpringPerformanceInterceptor" /> -->
+<!-- 	</mvc:interceptors> -->
+	
+	
+
+</beans>

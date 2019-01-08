@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-autowire="byName">
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	
+	
+	<bean name="configManager" class="com.saic.framework.athena.configuration.DefaultClientConfigManager">
+	    <property name="application" ref="application"/>
+	    <!--<property name="appName" value="venus-demo-provider"/>-->
+	    <property name="brokers" value="${athena.kafka.bootstrap.servers}"/>
+	    <!--<property name="brokers" value="10.32.221.6:9092,10.32.221.18:9092,10.32.221.23:9092"/>-->
+	</bean>
+	
+	<bean class="com.saic.framework.athena.module.base.AnnotationedAgentLogicScanner" init-method="init" autowire="byType"/>
+	
+	
+	
+  <!--saike应用配置-->
+	<bean id="application" class="com.saike.commons.Application" init-method="init">
+	 <!--appName 可选，若不配置则默认通过UCM从CMDB获取关联的应用名称-->
+ 
+	
+	 <property name="appName" value="ebiz-smcc-boot-web"/>
+	
+	</bean>
+	
+	<!--venus应用配置-->
+	<bean id="venusApplication" class="com.meidusa.venus.VenusApplication">
+	   <property name="application" ref="application"/>
+	</bean>
+	
+	<!--注册配置-->
+	<bean id="venusRegistryFactory" class="com.meidusa.venus.registry.VenusRegistryFactory">
+	   <property name="address" value="${venus.register.address}"/>
+	</bean>
+	
+	<!--监控配置-->
+	<bean id="venusMonitorFactory" class="com.meidusa.venus.monitor.VenusMonitorFactory">
+	   <property name="address" value="${venus.kafka.bootstrap.servers}"/>
+	</bean>
+
+    
+	<bean id="serviceFactory" class="com.meidusa.venus.client.VenusServiceFactory" destroy-method="destroy">
+		<property name="configFiles">
+			<list>
+				<value>classpath:conf/VenusClient.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+
+
+</beans>

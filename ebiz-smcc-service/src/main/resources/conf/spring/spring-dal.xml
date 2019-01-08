@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:rws="http://code.cn.ibm.com/schema/spring/rws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+   	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+
+   	http://code.cn.ibm.com/schema/spring/rws http://code.cn.ibm.com/schema/spring/rws.xsd">
+
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<bean id="dalClient" class="com.ibm.framework.dal.client.support.PaginationDalClient">		
+		<property name="resources" value="classpath*:conf/sqlMap/sqlMap_*.xml" />
+		<property name="defaultDataSource" ref="groupDataSourceOne" />
+	</bean>
+
+	<bean id="groupDataSourceOne" class="com.ibm.framework.dal.group.GroupDataSource">
+		<property name="dataSourceGroup" ref="dsGroupOne" />
+	</bean>
+
+	<rws:ds_group id="dsGroupOne">	
+		<rws:wr_ds name="master" ref="dataSourceForCRMSGM" type="mysql" />
+		<rws:ro_ds name="slave1" ref="dataSourceForCRMSGM" weight="100" type="mysql" />
+	</rws:ds_group>
+	
+	
+	<bean id="mysqlDialect" class="com.ibm.framework.dal.dialect.impl.MySQLDialect" />
+	<bean id="dialectFactory" class="com.ibm.framework.dal.dialect.DialectFactory">
+		<property name="mapDialect">
+			<map>
+				<entry key="mysql">
+					<ref bean="mysqlDialect" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+		<bean id="dataSourceForCRMSGM" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${ebiz.aic.ds.driver}" />
+		<property name="url" value="${ds.smdb.url}" />
+		<property name="username" value="${ds.smdb.smdb.username}" />
+		<property name="password" value="${ds.smdb.smdb.password}" />
+		<property name="maxActive" value="${aic.component.dbcp.maxActive}" />
+		<property name="minIdle" value="${aic.component.dbcp.minIdle}" />
+		<property name="maxIdle" value="${aic.component.dbcp.maxIdle}" />
+		<property name="maxWait" value="${aic.component.dbcp.maxWait}" />
+		<property name="testWhileIdle" value="${aic.component.dbcp.testWhileIdle}" />
+		<property name="testOnBorrow" value="${aic.component.dbcp.testOnBorrow}" />
+		<property name="timeBetweenEvictionRunsMillis" value="${aic.component.dbcp.timeBetweenEvictionRunsMillis}" />
+		<property name="minEvictableIdleTimeMillis" value="${aic.component.dbcp.minEvictableIdleTimeMillis}"/>
+		<property name="validationQuery" value="${aic.component.dbcp.validationQuery}"/>			
+	</bean>
+	
+	<bean id="dataSourceForOCS1" class="org.apache.commons.dbcp.BasicDataSource">		
+		<property name="driverClassName" value="${ebiz.csr.dm.driver}" />
+		<property name="url" value="${ebiz.csr.dm.url}"></property>
+		<property name="username" value="${ebiz.csr.dm.username}"></property>
+		<property name="password" value="${ebiz.csr.dm.password}"></property>
+		<property name="validationQuery" value="select 1 from dual"></property>
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSourceForOCS1" />
+		</property>
+	</bean>
+</beans>

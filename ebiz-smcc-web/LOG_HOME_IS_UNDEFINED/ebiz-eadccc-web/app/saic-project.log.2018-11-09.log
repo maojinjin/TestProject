@@ -1,0 +1,989 @@
+2018-11-09 10:19:35.973 [main] INFO  com.saic.ebiz.smcc.web.SpringbootDemoApplication -
+				Starting SpringbootDemoApplication on admin-PC with PID 8520 (D:\develop\code\aic_springboot\aic\ebiz-smcc-web\target\classes started by admin in D:\develop\code\aic_springboot\aic\ebiz-smcc-web)
+2018-11-09 10:19:35.982 [main] INFO  com.saic.ebiz.smcc.web.SpringbootDemoApplication -
+				No active profile set, falling back to default profiles: default
+2018-11-09 10:19:36.142 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -
+				Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bf38f5d: startup date [Fri Nov 09 10:19:36 CST 2018]; root of context hierarchy
+2018-11-09 10:19:36.906 [background-preinit] INFO  org.hibernate.validator.internal.util.Version -
+				HV000001: Hibernate Validator 5.1.1.Final
+2018-11-09 10:19:38.359 [main] INFO  o.s.b.factory.support.DefaultListableBeanFactory -
+				Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=freeMarkerViewResolverConfig; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/saic/ebiz/smcc/web/FreeMarkerViewResolverConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]]
+2018-11-09 10:19:39.118 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor -
+				JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-11-09 10:19:39.287 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-09 10:19:39.314 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'freeMarkerViewResolverConfig' of type [class com.saic.ebiz.smcc.web.FreeMarkerViewResolverConfig$$EnhancerBySpringCGLIB$$986b29cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-09 10:19:39.363 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'messageSource' of type [class org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-09 10:19:39.598 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-09 10:19:39.715 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb8142c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-09 10:19:40.638 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer -
+				Tomcat initialized with port(s): 8080 (http)
+2018-11-09 10:19:40.655 [main] INFO  org.apache.catalina.core.StandardService -
+				Starting service Tomcat
+2018-11-09 10:19:40.657 [main] INFO  org.apache.catalina.core.StandardEngine -
+				Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-11-09 10:19:40.869 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2018-11-09 10:19:40.870 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader -
+				Root WebApplicationContext: initialization completed in 4728 ms
+2018-11-09 10:19:41.253 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean -
+				Mapping servlet: 'dispatcherServlet' to [*.htm, *.ajax, *.json]
+2018-11-09 10:19:41.257 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean -
+				Mapping servlet: 'sitemeshFreemarkerDecoratorServlet' to [*.html, *.ftl]
+2018-11-09 10:19:41.257 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean -
+				Mapping servlet: 'dispatcherServlet' to [/]
+2018-11-09 10:19:41.257 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean -
+				Servlet dispatcherServlet was not registered (possibly already registered?)
+2018-11-09 10:19:41.261 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'errorPageFilter' to: [/*]
+2018-11-09 10:19:41.262 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-09 10:19:41.262 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-09 10:19:41.262 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-09 10:19:41.262 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-09 10:19:41.262 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'ddsSessionCooikeFilter' to urls: [*.htm, *.ajax, *.json]
+2018-11-09 10:19:41.262 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Filter characterEncodingFilter was not registered (possibly already registered?)
+2018-11-09 10:19:41.263 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean -
+				Mapping filter: 'pageFilter' to urls: [/*]
+2018-11-09 10:19:41.290 [localhost-startStop-1] ERROR c.s.f.session.filter.DdsSessionCooikeFilter -
+				No qualifying bean of type 'com.saic.framework.session.config.DdsSessionConfig' available
+2018-11-09 10:19:41.540 [main] INFO  o.s.ui.freemarker.SpringTemplateLoader -
+				SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.core.io.DefaultResourceLoader@57a1111a] and template loader path [/WEB-INF/]
+2018-11-09 10:19:41.541 [main] INFO  o.s.ui.freemarker.SpringTemplateLoader -
+				SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.core.io.DefaultResourceLoader@57a1111a] and template loader path [/WEB-INF/views/]
+2018-11-09 10:19:41.541 [main] INFO  o.s.ui.freemarker.SpringTemplateLoader -
+				SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.core.io.DefaultResourceLoader@57a1111a] and template loader path [/WEB-INF/auth_views/]
+2018-11-09 10:19:41.541 [main] INFO  o.s.ui.freemarker.SpringTemplateLoader -
+				SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.core.io.DefaultResourceLoader@57a1111a] and template loader path [/html/]
+2018-11-09 10:19:42.517 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -
+				Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bf38f5d: startup date [Fri Nov 09 10:19:36 CST 2018]; root of context hierarchy
+2018-11-09 10:19:42.635 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/login]}" onto private java.lang.String com.saic.ebiz.smcc.web.LoginController.login()
+2018-11-09 10:19:42.641 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-09 10:19:42.642 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-09 10:19:42.747 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-09 10:19:42.747 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-09 10:19:42.845 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping -
+				Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-09 10:19:43.918 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-09 10:19:44.911 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter -
+				Registering beans for JMX exposure on startup
+2018-11-09 10:19:44.946 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-09 10:19:44.975 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler [http-nio-8080]
+2018-11-09 10:19:45.000 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+				Using a shared selector for servlet write/read
+2018-11-09 10:19:45.039 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer -
+				Tomcat started on port(s): 8080 (http)
+2018-11-09 10:19:45.049 [main] INFO  com.saic.ebiz.smcc.web.SpringbootDemoApplication -
+				Started SpringbootDemoApplication in 9.994 seconds (JVM running for 11.743)
+2018-11-09 10:19:45.120 [cluster-ClusterId{value='5be4eebfa7af6a21481f00a5', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+				Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2018-11-09 10:20:41.404 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:20:51.589 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] -
+				Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-09 10:20:51.589 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-09 10:20:51.647 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization completed in 57 ms
+2018-11-09 10:21:41.405 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:22:41.407 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:23:41.407 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:24:41.408 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:25:41.409 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:26:41.410 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:27:41.412 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:28:41.412 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:29:41.414 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:30:41.414 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:31:41.416 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:32:41.418 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:33:41.417 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:34:41.419 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:35:41.419 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:36:41.424 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:37:41.422 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:38:41.423 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:39:41.425 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:40:41.425 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:41:41.426 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:42:41.427 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:43:41.428 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:44:41.429 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:45:41.430 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:46:41.432 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:47:41.433 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:48:41.433 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:49:41.439 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:50:41.436 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:51:41.436 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:52:41.439 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:53:41.439 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:54:41.439 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:55:41.440 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:56:41.441 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:57:41.443 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:58:41.444 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 10:59:41.445 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:00:41.446 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:01:41.446 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:02:41.448 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:03:41.449 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:04:41.450 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:05:41.463 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:06:41.453 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:07:41.453 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:08:41.454 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:09:41.455 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:10:41.456 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:11:41.458 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:12:41.458 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:13:41.460 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:14:41.461 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:15:41.461 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:16:41.462 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:17:41.463 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:18:41.465 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:19:41.465 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:20:41.467 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:21:41.468 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:22:41.468 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:23:41.471 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:24:41.470 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:25:41.472 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:26:41.473 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:27:41.474 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:28:41.475 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:29:41.476 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:30:41.477 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:31:41.477 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:32:41.480 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:33:41.481 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:34:41.482 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:35:41.482 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:36:41.484 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:37:41.487 [pool-1-thread-8] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:38:41.486 [pool-1-thread-8] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:39:41.487 [pool-1-thread-8] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:40:41.487 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:41:41.489 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:42:41.490 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:43:41.491 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:44:41.492 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:45:41.492 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:46:41.494 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:47:41.495 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:48:41.496 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:49:41.497 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:50:41.498 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:51:41.499 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:52:41.500 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:53:41.502 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:54:41.502 [pool-1-thread-8] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:55:41.503 [pool-1-thread-4] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:56:41.504 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:57:41.506 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:58:41.507 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 11:59:41.507 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:00:41.511 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:01:41.509 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:02:41.511 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:03:41.514 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:04:41.513 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:05:41.513 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:06:41.514 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:07:41.516 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:08:41.517 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:09:41.518 [pool-1-thread-8] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:10:41.519 [pool-1-thread-4] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:11:41.520 [pool-1-thread-4] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:12:41.521 [pool-1-thread-4] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:13:41.521 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:14:41.523 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:15:41.523 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:16:41.525 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:17:41.526 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:18:41.527 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:19:41.528 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:20:41.530 [pool-1-thread-4] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:21:41.530 [pool-1-thread-4] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:22:41.531 [pool-1-thread-4] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:23:41.532 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:24:41.533 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:25:41.535 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:26:41.535 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:27:41.537 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:28:41.537 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:29:41.541 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:30:41.540 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:31:41.540 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:32:41.542 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:33:41.542 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:34:41.544 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:35:41.544 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:36:41.559 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:37:41.547 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:38:41.548 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:39:41.549 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:40:41.550 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:41:41.551 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:42:41.552 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:43:41.552 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:44:41.555 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:45:41.555 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:46:41.556 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:47:41.556 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:48:41.558 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:49:41.559 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:50:41.560 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:51:41.561 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:52:41.562 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:53:41.563 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:54:41.564 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:55:41.566 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:56:41.567 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:57:41.568 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:58:41.568 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 12:59:41.569 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:00:41.576 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:01:41.571 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:02:41.573 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:03:41.573 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:04:41.575 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:05:41.575 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:06:41.576 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:07:41.589 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:08:41.579 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:09:41.580 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:10:41.581 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:11:41.582 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:12:41.584 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:13:41.584 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:14:41.585 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:15:41.587 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:16:41.588 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:17:41.588 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:18:41.590 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:19:41.592 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:20:41.591 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:21:41.593 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:22:41.593 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:23:41.595 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:24:41.595 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:25:41.597 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:26:41.598 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:27:41.598 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:28:41.600 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:29:41.601 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:30:41.602 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:31:41.603 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:32:41.604 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:33:41.605 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:34:41.606 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:35:41.607 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:36:41.608 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:37:41.609 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:38:41.610 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:39:41.612 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:40:41.612 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:41:41.617 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:42:41.615 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:43:41.615 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:44:41.618 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:45:41.617 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:46:41.621 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:47:41.620 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:48:41.621 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:49:41.622 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:50:41.623 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:51:41.624 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:52:41.625 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:53:41.626 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:54:41.627 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:55:41.629 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:56:41.629 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:57:41.631 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:58:41.632 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 13:59:41.632 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:00:41.636 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:01:41.635 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:02:41.636 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:03:41.637 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:04:41.637 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:05:41.639 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:06:41.640 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:07:41.641 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:08:41.642 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:09:41.644 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:10:41.644 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:11:41.645 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:12:41.646 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:13:41.649 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:14:41.713 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:15:41.649 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:16:41.652 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:17:41.651 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:18:41.652 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:19:41.654 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:20:41.654 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:21:41.656 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:22:41.656 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:23:41.658 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:24:41.659 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:25:41.660 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:26:41.661 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:27:41.662 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:28:41.663 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:29:41.664 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:30:41.666 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:31:41.666 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:32:41.668 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:33:41.669 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:34:41.669 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:35:41.672 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:36:41.672 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:37:41.673 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:38:41.673 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:39:41.676 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:40:41.688 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:41:41.676 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:42:41.679 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:43:41.679 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:44:41.681 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:45:41.681 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:46:41.683 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:47:41.684 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:48:41.684 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:49:41.686 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:50:41.687 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:51:41.688 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:52:41.689 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:53:41.691 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:54:41.691 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:55:41.693 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:56:41.694 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:57:41.694 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:58:41.696 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 14:59:41.696 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:00:41.698 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:01:41.699 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:02:41.700 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:03:41.701 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:04:41.702 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:05:41.703 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:06:41.704 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:07:41.706 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:08:41.714 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:09:41.708 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:10:41.709 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:11:41.709 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:12:41.711 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:13:41.712 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:14:41.713 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:15:41.714 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:16:41.716 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:17:41.717 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:18:41.717 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:19:41.719 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:20:41.719 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:21:41.721 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:22:41.721 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:23:41.723 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:24:41.726 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:25:41.724 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:26:41.726 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:27:41.727 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:28:41.728 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:29:41.729 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:30:41.731 [pool-1-thread-7] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:31:41.731 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:32:41.734 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:33:41.734 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:34:41.734 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:35:41.735 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:36:41.735 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:37:41.737 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:38:41.737 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:39:41.738 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:40:41.740 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:41:41.742 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:42:41.742 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:43:41.743 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:44:41.745 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:45:41.745 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:46:41.746 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:47:41.747 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:48:41.747 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:49:41.749 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:50:41.750 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:51:41.752 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:52:41.753 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:53:41.754 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:54:41.755 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:55:41.755 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:56:41.757 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:57:41.758 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:58:41.759 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 15:59:41.760 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:00:41.761 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:01:41.762 [pool-1-thread-8] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:02:41.763 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:03:41.764 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:04:41.765 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:05:41.767 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:06:41.767 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:07:41.769 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:08:41.770 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:09:41.785 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:10:41.772 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:11:41.773 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:12:41.775 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:13:41.774 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:14:41.776 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:15:41.777 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:16:41.780 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:17:41.780 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:18:41.780 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:19:41.781 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:20:41.782 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:21:41.784 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:22:41.784 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:23:41.785 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:24:41.786 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:25:41.787 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:26:41.793 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:27:41.789 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:28:41.792 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:29:41.791 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:30:41.792 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:31:41.794 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:32:41.794 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:33:41.796 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:34:41.796 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:35:41.798 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:36:41.799 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:37:41.800 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:38:41.803 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:39:41.803 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:40:41.803 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:41:41.804 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:42:41.806 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:43:41.806 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:44:41.808 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:45:41.808 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:46:41.809 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:47:41.811 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:48:41.811 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:49:41.813 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:50:41.813 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:51:41.815 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:52:41.815 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:53:41.818 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:54:41.818 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:55:41.821 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:56:41.820 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:57:41.821 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:58:41.823 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 16:59:41.823 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:00:41.824 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:01:41.826 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:02:41.826 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:03:41.828 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:04:41.828 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:05:41.835 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:06:41.831 [pool-1-thread-2] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:07:41.831 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:08:41.833 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:09:41.834 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:10:41.835 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:11:41.835 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:12:41.840 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:13:41.838 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:14:41.839 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:15:41.840 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:16:41.841 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:17:41.843 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:18:41.843 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:19:41.845 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:20:41.845 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:21:41.847 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:22:41.848 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:23:41.848 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:24:41.851 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:25:41.850 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:26:41.862 [pool-1-thread-1] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:27:41.853 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:28:41.854 [pool-1-thread-6] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:29:41.855 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:30:41.856 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:31:41.857 [pool-1-thread-3] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:32:41.858 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:33:41.860 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0
+2018-11-09 17:34:41.860 [pool-1-thread-5] INFO  com.saic.framework.redis.client.aop.Reporter -
+				total: 0,notHit: 0,hitRate: -100.0

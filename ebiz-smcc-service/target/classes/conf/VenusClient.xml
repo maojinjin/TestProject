@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<venus-client>
+
+	<!-- 定义服务以及指定该服务提供方的远程相关配置 -->
+	<services>
+		<!-- 会员电话信息接口 -->
+		<service beanName="phoneService" type="com.saic.ebiz.mdm.api.PhoneService" />
+		<!-- 用户信息接口 -->
+		<service beanName="userService" type="com.saic.ebiz.mdm.api.UserService" />
+		<service beanName="mdmUserService" type="com.saic.ebiz.mdm.api.UserService" />
+		<!-- 查询用户证件列表接口 -->
+		<service beanName="identityCardService" type="com.saic.ebiz.mdm.api.IDentityCardService" />
+		<!-- 订单信息接口 -->
+		<service beanName="callCenterService" type="com.saic.ebiz.order.service.api.CallCenterService" />
+		<service beanName="preOrderQueryService" type="com.saic.ebiz.order.service.api.PreOrderQueryService" />
+		<service beanName="mainVehicleSeriesService" type="com.saic.ebiz.carmall.service.api.IMainVehicleSeriesService" />
+		<service beanName="testDriveService" type="com.saic.ebiz.carmall.service.api.ITestDriveService" />
+		
+		<!-- 短信接口 -->
+		<service beanName="uniMessageService" type="com.saic.framework.message.UniMessageService"/>
+		<!-- 数据字典接口-->
+		<service beanName="itcodeService" type="com.saic.ebiz.dictionary.service.api.ITCodeService" />
+        <!--  二手车 接口推送 type:他们调用接口路径-->
+        <service beanName="customerServicef" type="com.anji.uc.service.api.CustomerService" >
+        </service>
+       <!-- 328中奖活动   CSC 接口 -->
+		<service beanName="promInfoService" type="com.saic.ebiz.promotion.service.api.ITPromInfoService" >
+        </service>
+		<service beanName="spuService" type="com.saic.ebiz.carmall.service.api.ISpuService" >
+        </service>      
+        <!-- 车享信息查询  接口 start -->  
+		<service beanName="insuranceSolutionService" type="com.saic.ebiz.carmall.service.api.IInsuranceSolutionService" >
+        </service>   
+		<service beanName="financeSolutionService" type="com.saic.ebiz.carmall.service.api.IFinanceSolutionService" >
+        </service>           
+		<service beanName="marketSolutionService" type="com.saic.ebiz.carmall.service.api.IMarketSolutionService" >
+        </service>  
+		<service beanName="channelService" type="com.saic.ebiz.carmall.service.api.IChannelService" >
+        </service> 
+ 
+		<service beanName="categoryService" type="com.saic.ebiz.carmall.service.api.ICategoryService" >
+        </service> 
+		<service beanName="attributeService" type="com.saic.ebiz.carmall.service.api.IAttributeService" >
+        </service> 
+		<service beanName="attrValueService" type="com.saic.ebiz.carmall.service.api.IAttrValueService" >
+        </service> 
+		<service beanName="stockService" type="com.saic.ebiz.carmall.service.api.IStockService" >
+        </service> 
+		<service beanName="stockDetailService" type="com.saic.ebiz.carmall.service.api.IStockDetailService" >
+        </service>             
+		<service beanName="mdmVelModelInfoClient" type="com.saic.ebiz.carlib.sales.client.MDMVelModelInfoClient" >
+        </service> 
+		<service beanName="mdmVelColorClient" type="com.saic.ebiz.carlib.sales.client.MDMVelColorClient" >
+        </service>         
+		<service beanName="rtfExtService" type="com.saic.ebiz.cms.service.api.IRTFExtService" >        
+        </service> 
+        <!-- a车站 -->
+        <service beanName="commonApi" type="com.ebiz.cxj.api.cs.CommonApi" >        
+        </service> 
+        <!-- 车享信息查询  接口 end -->     
+                                                                    
+        <!-- 会员中心查询 -->
+        <service beanName="assetService" type="com.saic.ebiz.mdm.api.AssetService" >
+        </service>
+        <service beanName="memberBindService" type="com.saic.ebiz.mdm.api.MemberBindService" >
+        </service>
+        <service beanName="userStatisticService" type="com.saic.ebiz.mdm.api.UserStatisticService" >
+        </service>
+        <service beanName="userGradeService" type="com.saic.ebiz.mdm.api.UserGradeService" >
+        </service>
+         <!-- dop -->
+       <!--  <service beanName="storeService" type="com.saic.ebiz.dop.service.store.api.IStoreService" remote="dop">
+        </service>
+        <service beanName="dealerService" type="com.saic.ebiz.dop.service.store.api.IDealerService" remote="dop2">
+        </service> -->
+         <service beanName="storeService" type="com.saic.ebiz.mdm.partner.api.IStoreService" >
+        </service>
+        
+         <service beanName="partnerRoleService" type="com.saic.ebiz.mdm.partner.api.IPartnerRoleService" >
+        </service>
+        
+        <service beanName="dealerService" type="com.saic.ebiz.mdm.partner.api.IDealerService" >
+        </service> -->
+        <service beanName="partnerQueryService" type="com.saic.ebiz.mdm.partner.api.MDMPartnerQueryService" >
+        </service>
+         <service beanName="velBusinessDataService" type="com.ebiz.dre.adapter.api.VelBusinessDataService" >
+        </service>
+		<!-- 经销商DOP相关接口 -->
+		<!-- <service beanName="storeQueryService"
+			type="com.saic.ebiz.dop.service.store.api.StoreQueryService" remote="dop">
+		</service>    -->     
+        
+       <service beanName="storeQueryService"
+			type="com.saic.ebiz.mdm.partner.api.MDMStoreQueryService" >
+		</service>
+		<!-- mdm车享家省市区 -->
+		<service beanName="serviceProviderService"
+			type="com.saic.ebiz.mdm.partner.api.IServiceProviderService" >
+		</service>
+		
+		<service beanName="mdmQueryStoreByAreaService"
+			type="com.saic.ebiz.mdm.partner.api.IService" >
+		</service>
+		
+		<service beanName ="regionService" type="com.saic.ebiz.dictionary.service.api.IRegionService" ></service>
+		
+        <service beanName="vehicleMemberBindService" type="com.saic.ebiz.mms.service.api.VehicleMemberBindService"  >
+      	</service> 
+      	<service beanName="msIdCardService" type="com.saic.ebiz.mms.service.api.MmsIdCardService"  >
+      	</service> 
+      	<!-- 售前车型库  品牌-->
+      	<service beanName="brandService" type="com.saic.ebiz.carlib.sales.api.MDMBrandService"  >
+      	</service>       	
+      	<!-- 售前车型库  车系-->
+      	<service beanName="velSeriesService" type="com.saic.ebiz.carlib.sales.api.MDMVelSeriesService"  >
+      	</service> 
+      	<!-- 售前车型库 车型 -->
+      	<service beanName="velModelInfoService" type="com.saic.ebiz.carlib.sales.api.MDMVelModelInfoService"  >
+      	</service> 
+      	<!-- 售后车型库 车型 -->
+      	<service beanName="mdmAftersalesVelModelInfoService" type="com.saic.ebiz.carlib.aftersales.api.MDMAftersalesVelModelInfoService"  >
+      	</service> 
+      	<!-- 售后车型库 品牌  -->
+      	<service beanName="mdmAftersalesVelBrandService" type="com.saic.ebiz.carlib.aftersales.api.MDMAftersalesVelBrandService"  >
+      	</service>
+      	 <service beanName="couponQueryService" type="com.saic.ebiz.coupon.service.api.ICouponQueryService"  >
+      	</service>
+      	<service beanName="couponTradeService" type="com.saic.ebiz.coupon.service.api.ICouponTradeService"  >
+      	</service>
+      	<service beanName="smsSecurityService" type="com.saike.sms.security.service.SmsSecurityService"  >
+      	</service>
+      	<service beanName="vcardAcctSearchService" type="com.saic.ebiz.vcard.service.api.VcardAcctSearchService"  >
+      	</service>
+      	<service beanName="mdmAftersalesVelSeriesService" type="com.saic.ebiz.carlib.aftersales.api.MDMAftersalesVelSeriesService"  >
+      	</service> 
+      	<service beanName="userCouponMapping" type="com.saic.ebiz.mms.service.api.IUserCouponMapping"  >
+      	</service>    
+        <!-- 车享家接口 -->
+		<service beanName="storeApi" type="com.ebiz.cxj.api.cs.StoreApi" />
+		<service beanName="orderApi" type="com.ebiz.cxj.api.cs.OrderApi" />
+		<service beanName="returnRefundApi" type="com.ebiz.cxj.api.cs.ReturnRefundApi" />
+		<service beanName="cardApi" type="com.ebiz.cxj.api.cs.CardApi" />
+		<!-- CRM会员等级服务 -->
+		<service beanName="rightGradeService" type="saic.crm.web.memberLoyaltyManagementSystem.api.IRightGradeService" />
+		<!--<service beanName="EsMailService" type="com.saic.ebiz.eadccc.es.service.mail.api.IEsMailService" /> -->
+      	<!-- <service beanName="esEmailAutoService" type="com.saic.ebiz.aic.es.service.mail.api.IEsMailService" /> -->
+   
+   
+    </services>
+    
+    
+</venus-client>

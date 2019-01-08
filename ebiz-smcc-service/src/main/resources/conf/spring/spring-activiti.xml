@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+   	http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config/>
+    <context:component-scan base-package="com.saic.ebiz.aic"/>
+    
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSourceForCRMSGM" />
+    </bean>
+    
+    <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
+        <property name="dataSource" ref="dataSourceForCRMSGM" />
+        <property name="transactionManager" ref="transactionManager" />
+        <property name="databaseSchemaUpdate" value="true" />
+        <property name="history" value="full" />
+        <property name="jobExecutorActivate" value="false" />
+<!--         <property name="customSessionFactories"> -->
+<!--             <list> -->
+<!--                 <bean class="com.saic.ebiz.aic.service.flow.PUserManagerFactory"/> -->
+<!--                 <bean class="com.saic.ebiz.aic.service.flow.PGroupManagerFactory"/> -->
+<!--             </list> -->
+<!--         </property> -->
+        <!-- 发布流程生成图片是正常显示中文 -->
+        <property name="activityFontName" value="\u5B8B\u4F53"></property>
+        <property name="labelFontName" value="\u5B8B\u4F53"></property>
+		<!-- 使用spring的自动资源加载部署方式部署 -->
+<!--     	<property name="deploymentResources" value="classpath*:conf/bpmn/*.bpmn" /> -->
+    </bean>
+    
+    <bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">
+        <property name="processEngineConfiguration" ref="processEngineConfiguration" />
+    </bean>
+    <bean id="taskService" factory-bean="processEngine" factory-method="getTaskService"></bean>
+    <bean id="formService" factory-bean="processEngine" factory-method="getFormService"></bean>
+    <bean id="repositoryService" factory-bean="processEngine" factory-method="getRepositoryService" />
+    <bean id="runtimeService" factory-bean="processEngine" factory-method="getRuntimeService" />
+    <bean id="historyService" factory-bean="processEngine" factory-method="getHistoryService" />
+    <bean id="managementService" factory-bean="processEngine" factory-method="getManagementService" />
+    <bean id="identityService" factory-bean="processEngine" factory-method="getIdentityService" />
+</beans>

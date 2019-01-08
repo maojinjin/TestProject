@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/views/decorators">
+	<excludes>
+		<pattern>**/css/*</pattern>
+		<pattern>**/images/*</pattern>
+		<pattern>**/js/*</pattern>
+		<pattern>**/*.ajax*</pattern>
+		<pattern>**/menu/*</pattern>
+		<pattern>**/*.json*</pattern>
+		<pattern>**/login.htm*</pattern>
+		<pattern>**/top.htm*</pattern>
+		<pattern>**/index.htm*</pattern>
+		<pattern>**/403.htm*</pattern>
+		<pattern>**/404.htm*</pattern>
+		<pattern>**/500.htm*</pattern>
+	</excludes>
+
+	<decorator name="main" page="main.html">
+		<pattern>*.htm</pattern>
+	</decorator>
+	
+	<decorator name="input" page="uaa_main_input.html">
+		<pattern>*/uaa/*input.htm</pattern>
+	</decorator>
+	<decorator name="list" page="uaa_main_list.html">
+		<pattern>*/uaa/*list.htm</pattern>
+	</decorator>
+</decorators>
+
